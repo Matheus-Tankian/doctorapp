@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 header(size),
-                SizedBox(height: size.height / 40),
+                SizedBox(height: size.height / 100),
                 customTextField(size),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
                     width: size.width / 1.15,
                     child: RichText(
                       text: const TextSpan(
-                        text: "What Are You",
+                        text: "O que você está",
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 17,
@@ -35,13 +35,10 @@ class HomeScreen extends StatelessWidget {
                         ),
                         children: <TextSpan>[
                           TextSpan(
-                            text: "\tSuffering",
+                            text: "\tSentindo?",
                             style: TextStyle(
                               color: textColor,
                             ),
-                          ),
-                          TextSpan(
-                            text: "\twith?",
                           ),
                         ],
                       ),
@@ -56,8 +53,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 availableDoctors(size),
                 showAvalibleDoctors(size),
-                customButton(size, "+ Book An Appointment"),
-                customButton(size, " Covid-19 Emergency Helpline"),
+                customButton(size, "+ Marque uma consulta"),
+                customButton(size, " Linha de combate ao Covid-19"),
               ],
             ),
           ),
@@ -96,10 +93,10 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           doctorCard(size, "Dr. Dicyanshi",
-              "Cardiologist At Apollo Medical Hospital",
+              "Cardiologista do Apollo Medical Hospital",
               'assets/surgeon.png'),
           doctorCard(size,"Dr. Hafiz Sayeed",
-              "Neuro Surgeon, Runs a Private Hospital", 'assets/doctor1.png'),
+              "Neurocirurgião, administra um hospital particular", 'assets/doctor1.png'),
         ],
       ),
     );
@@ -170,7 +167,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           RichText(
             text: const TextSpan(
-              text: "Doctors",
+              text: "Doutores",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -178,7 +175,7 @@ class HomeScreen extends StatelessWidget {
               ),
               children: [
                 TextSpan(
-                  text: "\nAvailable Now",
+                  text: "\nDisponível agora",
                   style: TextStyle(
                     fontSize: 16,
                   ),
@@ -220,7 +217,7 @@ class HomeScreen extends StatelessWidget {
           ),
           RichText(
             text: const TextSpan(
-              text: "Click Here For",
+              text: "Clique aqui para",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 15,
@@ -228,13 +225,14 @@ class HomeScreen extends StatelessWidget {
               ),
               children: <TextSpan>[
                 TextSpan(
-                  text: "\tCovide-19",
+                  text: "\tObter Ajuda",
+
+                ),
+                TextSpan(
+                  text: "\tCovide-19 >>",
                   style: TextStyle(
                     color: textColor,
                   ),
-                ),
-                TextSpan(
-                  text: "\tHelp >>",
                 ),
               ],
             ),
@@ -252,8 +250,8 @@ class HomeScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          diseaseTiles(size, "Lungs Problem", 'assets/lungs.png'),
-          diseaseTiles(size, "Brain Problem", 'assets/brain.png'),
+          diseaseTiles(size, "Problema de Pulmão", 'assets/lungs.png'),
+          diseaseTiles(size, "Problema cerebral", 'assets/brain.png'),
         ],
       ),
     );
@@ -286,11 +284,13 @@ class HomeScreen extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 text: TextSpan(
                   text: diseaseName.split(" ").first,
+
                   style: const TextStyle(
                     color: textColor,
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
+
                   children: <TextSpan>[
                     TextSpan(
                         text: diseaseName.split(" ").last,
@@ -320,7 +320,7 @@ class HomeScreen extends StatelessWidget {
             ),
             alignment: Alignment.center,
             child: const Text(
-              "Symptoms, dissease and doctor...",
+              "Sintomas, doença e médico...",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 15,
@@ -355,7 +355,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           RichText(
             text: const TextSpan(
-              text: "Good",
+              text: "Bom",
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 24,
@@ -363,7 +363,7 @@ class HomeScreen extends StatelessWidget {
               ),
               children: <TextSpan>[
                 TextSpan(
-                  text: "\tMorning",
+                  text: "\tDia",
                   style: TextStyle(color: textColor),
                 ),
                 TextSpan(

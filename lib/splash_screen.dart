@@ -109,7 +109,7 @@ class _SplashScreenState extends State<SplashScreen> {
             left: 60,
             child: RichText(
               text: const TextSpan(
-                text: "Doctor",
+                text: "Doutor",
                 style: TextStyle(
                   fontSize: 60,
                   color: textColor,
